@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login page{%endblock%}
+
+    {% block css %}
+    {% endblock %}	
+	
+        {% block nav-bar %}
+		  <ul>
+		 <a href="index.html"> <li><span>Home</span></li></a>
+		 <a href="#"> <li>Guides</li></a> 
+		 <a href="#"> <li>Tour and Treks</li></a> 
+		 <a href="#"> <li>Our Services</li></a> 
+		 <a href="#"> <li>Why Us?</li></a> 
+		 <a href="#"> <li>Contact</li></a> 
+		 <a href="login.html"> <li><i class="fas fa-user"></i> Login</li></a> 
+		 <a href="{% url 'signup' %}"> <li>Register ?</li></a> 
+
+		  </ul>
+          {% endblock %}
+
+	
+    {% block media_content %}
+<div class="forms">
+    <ul class="tab-group">
+        <li class="tab active"><a href="#login">Log In</a></li>
+        
+
+    </ul>
+    <form action="#" id="login">
+        {% csrf_token %}
+          <h1>Login</h1>
+          <div class="input-field">
+            <label for="email">Email</label>
+            <input type="email" name="email" required="email" />
+            <label for="password">Password</label> 
+            <input type="password" name="password" required/>
+            <input type="submit" value="Login" class="button"/>
+            <p class="text-p"> <a href="#">Forgot password?</a> </p>
+          </div>
+      </form>
+      
+</div>
+{% endblock%}
+
+
+
+
