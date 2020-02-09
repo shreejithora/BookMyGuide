@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+	Home page
+{% endblock %}
+
+{% block css %}
+	 
+{% endblock %}
+
+{% block nav-bar %}
+    <ul>
+		<a href="{% url 'bmg_app:home'%}"> <li><span>Home</span></li></a>
+		<a href="{% url 'destination:findaguide'%}"> <li>Find a Guide</li></a>
+		<a href="{% url 'destination:trekandtour'%}"> <li>Tour and Treks</li></a>
+		<a href="{% url 'bmg_app:ourservice'%}"> <li>Our Services</li></a>
+		<a href="{% url 'bmg_app:whyus'%}"> <li>Why Us?</li></a>
+		<a href="{% url 'bmg_app:store'%}"> <li>Store</li></a>
+		<a href="{% url 'user:login'%}"> <li><i class="fas fa-user"></i> Login</li></a>
+		<a href="{% url 'user:signup_guide'%}"> <li>Register ?</li></a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    </ul>
+{% endblock %}
+
+{% block media_content %}
+<div class="head">
+
+	<div class="head-pic">
+		<div class="search">
+	<div class="search-box">
+		<i class="fas fa-search"></i>
+		<input type="text" placeholder="Search..">
+		<p>Search your destination </p>
+	</div>
+</div>
+
+	</div>
+</div>
+<hr>
+{% endblock %}
+
