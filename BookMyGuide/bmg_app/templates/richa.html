@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{%endblock%}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/Guideprofile.css' %}">
+    {% endblock %}
+
+{% block nav-bar %}
+		  <ul>
+		 <a href="#"> <li><span>Home</span></li></a>
+		 <a href="findaguide.html"> <li>Find a Guide</li></a>
+		 <a href="toursandtreks.html"> <li>Tour and Treks</li></a>
+		 <a href="ourservices.html"> <li>Our Services</li></a>
+		 <a href="whyus.html"> <li>Why Us?</li></a>
+		 <a href="contactus.html"> <li>Contact Us</li></a>
+		 <a href="login.html"> <li><i class="fas fa-user"></i> Login</li></a>
+		 <a href="signin_guide.html"> <li>Register ?</li></a>
+		 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+
+		  </ul>
+{% endblock %}
+
+{% block media_content %}
+
+    <div class="Main">
+        <div class="guidetop">
+            <img src="image/siloutte.jpg "class="sil">
+            <img src="image/b.jpg" class="pp">
+        </div>
+        <div class="content">
+            <h1 class="name">Richa Thapa</h1>
+        <DIV class="buttons">
+		<BUTTON>Schedule Tour</BUTTON>
+        <button>Go Now</button>
+        <button>Report</button>
+        </div>
+        <div class="details">
+            <h1>Details</h1>
+            <hr style="background-color: black;">
+            <p>Hourly pay: 20$<br>
+                Daily pay: 20$<br>
+                Liscence No:10203<br>
+                Experience:5 years<br>
+                Languages spoken:English,French,Spanish<BR>
+                <a href="">Tours and Treks list</a>
+            </p>
+        </div>
+        <div class="bio">
+            <p class="comment"><B>Hello! Bonjour! Hola!I've been working in this field for 5 years.
+                I´m looking for a chance to show travellers my amazing country full of sereneness,beauty and culture.
+            I look forward to go exploring with you.</B></p>
+        </div>
+    </dIV>
+    <hr class="t">
+    <div class="how">
+        <h1>How it works?</h1>
+        <p><b>STEP 1:</b>You click "Schedule a tour" and fill in your details.<br>
+            <b>STEP 2:</b>If the guide is available, they will accept the tour request. Either way, we will notify you
+            via email within 30 minutes for 'Go Now' requests and within 24 hours for 'Schedule Tour' requests with the payment details.<br>
+            <b>STEP 3:</b>If you have chosen 'Go Now', your guide will immediately leave to come meet you and start your tour. <br>
+            <!--If you have scheduled a tour, you'll receive a reminder by the guide 24 hours in advance of the start time.-->
+            <b>STEP 4:</b>After the guide accepts the tour request, we'll send you a email with a confirmation code.
+             When the guide arrives, you'll give the guide that confirmation code to start the tour.You can use the same
+              code to give reviews later.<BR>
+            <b>STEP 5:</b>Enjoy
+        </P>
+    </div>
+    <hr class="i">
+    <div class="review">
+      <h1>Reviews</h1>
+    </div>
+    </div>
+	</div>
+    </div>
+
+<form action="" method="post" accept-charset="utf-8">
+        <fieldset><legend>Leave a review</legend>
+        <p><label for="review">Review     </label><textarea name="review" rows="8" cols="40">
+           </textarea></p>
+           <p><label for="customer code">Customer code</label><textarea name="code" rows="1"  cols="40">
+        </textarea></p>
+        <p><input type="submit" value="Submit Review     "></p>
+        <input type="hidden" name="product_type" value="actual_product_type" id="product_type">
+        <input type="hidden" name="product_id" value="actual_product_id" id="product_id">
+    </fieldset>
+    </form>
+
+{% endblock%}
+
+
+
+
+
+

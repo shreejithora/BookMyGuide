@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{%endblock%}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/store.css' %}">
+    {% endblock %}
+
+{% block nav-bar %}
+    <ul>
+		<a href="{% url 'bmg_app:home'%}"> <li>Home</li></a>
+		<a href="{% url 'destination:findaguide'%}"> <li>Find a Guide</li></a>
+		<a href="{% url 'destination:trekandtour'%}"> <li>Tour and Treks</li></a>
+		<a href="{% url 'bmg_app:ourservice'%}"> <li>Our Services</li></a>
+		<a href="{% url 'bmg_app:whyus'%}"> <li>Why Us?</li></a>
+		<a href="{% url 'bmg_app:store'%}"> <li> <span>Store</span> </li></a>
+		<a href="{% url 'user:login'%}"> <li><i class="fas fa-user"></i> Login</li></a>
+		<a href="{% url 'user:signup_guide'%}"> <li>Register ?</li></a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    </ul>
+{% endblock %}
+
+{% block media_content %}
+
+    <div class="content">
+        <p>Get the best offers online.</p>
+        <div class=card>
+            <img src="../media/image/zip.jpg">
+            <p><A href=""><b>Adventure Sports Nepal</b></a><br>
+                Couple zipline package at only 20$.Get the offer right now!</p>
+        </div>
+        <div class=card>
+            <img src="../media/image/1.jpeg">
+            <p><A href=""><b>Welcome Trekking Store<br></b></a><br>
+                     <br>Buy the best trek gear online at okdam.com.</p>
+        </div>
+        <div class=card>
+            <img src="image/rent.jpg">
+            <p><A href=""><b>Kalapathar trekking store</b></a>
+                <br>Rent your trekking gear at the best price.</p>
+        </div>
+
+    </div>
+{% endblock%}

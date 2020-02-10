@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Hire Guide{%endblock%}
+
+{% block css %}
+{% endblock %}
+
+{% block nav-bar %}
+<ul>
+    <a href="{% url 'bmg_app:home'%}"> <li>Home</li></a>
+    <a href="{% url 'destination:findaguide'%}"> <li>Find a Guide</li></a>
+	<a href="{% url 'destination:trekandtour'%}"> <li> <span> Tour and Treks</span></li></a>
+    <a href="{% url 'bmg_app:ourservice'%}"> <li>Our Services</li></a>
+    <a href="{% url 'bmg_app:whyus'%}"> <li>Why Us?</li></a>
+    <a href="{% url 'bmg_app:store'%}"> <li>Store</li></a>
+    <a href="{% url 'user:login'%}"> <li><i class="fas fa-user"></i><span>Login</span></li></a>
+    <a href="{% url 'user:signup_guide'%}"> <li>Register ?</li></a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+   </ul>
+{% endblock %}
+
+{% block media_content %}
+	<div class="forms">
+    <ul class="tab-group">
+        <li class="tab active"><a href="#hire">Guide hire form</a></li>
+
+
+
+    </ul>
+    <form action="#" id="login">
+          <h1>Hire</h1>
+          <div class="input-field">
+            <label for="date">Date</label>
+            <input type="text" name="datefilter" value="" />
+            <label for="address">Full addresss</label>
+            <input type="text" name="address" required/>
+            <label for="contact">contact</label>
+            <input type="number" name="contact" required/>
+            <label for="country">Country</label>
+            <input type="text" name="country" required/>
+            <label for="group">Request</label>
+            <input type="radio" name="tour" value="stour"> Shared tour<br>
+			<input type="radio" name="tour" value="ptour"> Private tour<br>
+			<label for="tour_no">Number</label>
+			<select>
+				  <option value="one">1</option>
+				  <option value="two">2</option>
+				  <option value="three">3</option>
+				  <option value="four">4</option>
+				  <option value="five">5</option>
+				  <option value="six">6</option>
+				  <option value="seven">7</option>
+				  <option value="eight">8</option>
+
+			</select>
+            <br>
+            <br>
+            <input type="submit" value="Hire" class="button"/>
+
+
+          </div>
+      </form>
+
+</div>
+
+
+{% endblock%}
+
+
+
+

@@ -15,6 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import *
+
+app_name = 'bmg_app'
 
 urlpatterns = [
+    path('', index, name='home'),
+    path('ourservices/', ourservices, name='ourservice'),
+    path('store/', store, name='store'),
+    path('whyus/', whyus, name='whyus'),
 ]

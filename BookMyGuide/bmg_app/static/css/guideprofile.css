@@ -1,0 +1,72 @@
+.main{
+    clear: both;
+}
+.sil{
+    position: absolute;
+    width: 100%;
+}
+.pp{
+    
+    position: relative;
+    height: 120px;
+    max-width: 250px;
+    margin:10px 0px 0px 0px ;
+    border: solid white;
+    border-left-width:42px ;
+    border-bottom-width:9px ;
+}
+.name{
+    max-width: 350px;
+    margin-left: 40px;
+    float: left;
+    font-family: cursive;
+}
+.buttons{
+    margin:10px 0px 0px 90px;
+    float:left;
+}
+.buttons button{
+    font-size: 15px;
+    height: 40px;
+    width:170px;
+}
+.buttons button:hover{
+    background-color: orangered;
+}
+.details{
+   
+    float: right;
+    font-size:15px;
+    height:350px;
+    max-width: 300px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: solid black;
+    background-color:blanchedalmond;
+    clear: both;
+}
+.details p{
+    margin-left: 10px;
+}
+.bio{
+    height: 100px;
+    width:800px ;
+    margin: 10px;
+}
+.comment{
+    float: left;
+    font-family: cursive;
+    font-size: 14px;
+}
+.t{
+    margin-top: 90px;
+    color: black;
+}
+.how {
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+  
+}
+.HOW B{
+    color: black;
+
+}

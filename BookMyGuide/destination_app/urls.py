@@ -15,6 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import *
+
+app_name = 'destination'
 
 urlpatterns = [
+    path('findaguide/', findaguide, name='findaguide'),
+    path('annapurna/', annapurna, name='annapurna'),
+    path('everest/', everest, name='everest'),
+    path('kathmandu/', kathmandu, name='kathmandu'),
+    path('bhaktapur/', bhaktapur, name='bhaktapur'),
+    path('hireform/', hireform, name='hireform'),
+    path('treksandtours/', trekandtour, name='trekandtour'),
 ]
