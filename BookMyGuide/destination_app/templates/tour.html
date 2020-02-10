@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book My Guide</title>
+		<!-- <link rel="stylesheet" type="text/css" href="css/all.css"> -->
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/tour.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	
+	
+	<!-- <script defer src="js/all.js"></script> -->
+</head>
+<body>
+	<div class="container">
+		<div class="logo wow slideInLeft">
+  			<a href="#"><img src="../../media/image/bmg.png" alt="" width="130"/></a>
+ 		 </div>
+ 		 
+		<nav class="menu wow bounceInUp" id="myTopnav">
+            <ul>
+                <a href="{% url 'bmg_app:home'%}"> <li>Home</li></a>
+                <a href="{% url 'destination:findaguide'%}"> <li> <span>Find a Guide</span> </li></a>
+                <a href="{% url 'destination:trekandtour'%}"> <li>Tours and Treks</li></a>
+                <a href="{% url 'bmg_app:ourservice'%}"> <li>Our Services</li></a>
+                <a href="{% url 'bmg_app:whyus'%}"> <li>Why Us?</li></a>
+                <a href="{% url 'bmg_app:store'%}"> <li>Store</li></a>
+                <a href="{% url 'user:login'%}"> <li><i class="fas fa-user"></i><span>Login</span></li></a>
+                <a href="{% url 'user:signup_guide'%}"> <li>Register ?</li></a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+               </ul>
+		 </nav>
+		  <div class="logo wow slideInLeft" style="float: right;">
+			 <img id=visit src="image/visit.png" alt="image" width="110"/>
+		 </div>
+	</div>
+	<hr>
+<!-- profile -->
+
+<div class="promotion">
+	<div class="content">
+		<img src="image/abc.jpg">
+	</div>
+	<div class="content">
+		<h1>ABC </h1>
+		<p>Number of tourist: 13</p>
+		<p>Cost :100$</p>
+		<p>Time : 3 days</p>
+		<p>Annapurna base camp trek is an amazing walk through diverse landscape and culture complete with rich mountain vistas, terraced fields, quaint Gurung villages and a wide variety of flora and fauna.</p>
+	</div>
+</div>
+
+
+<!-- footer -->
+<footer class="footer-distributed">
+ 
+			<div class="footer-left">
+          <img src="image/bmg.png">
+				
+ 
+				<p class="footer-links">
+					<a href="#">Home</a>
+					|
+					<a href="#">Blog</a>
+					|
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
+ 
+				<p class="footer-company-name">© 2020 Book My Guide ...</p>
+			</div>
+ 
+			<div class="footer-center">
+				<div>
+					<i class="fas fa-map-marker"></i>
+					  <p><span>Lalitpur,Katmandu</span>
+						</p>
+				</div>
+ 
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 22-27782183</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@eduonix.com">bmg@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-linkedin"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
+
+<script src="js/wow.min.js"></script>
+<script>
+              new WOW().init();
+</script>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "menu") {
+    x.className += " responsive";
+  } else {
+    x.className = "menu";
+  }
+}
+</script>
+</body>
+</html>

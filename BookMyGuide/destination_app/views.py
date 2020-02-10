@@ -22,3 +22,9 @@ def bhaktapur(request):
 
 def trekandtour(request):
     return render(request, 'trekandtour.html')
+
+def tour(request):
+    return render(request, 'tour.html')
+
+def richa(request):
+    return render(request, 'richa.html')

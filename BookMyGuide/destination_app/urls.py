@@ -27,4 +27,6 @@ urlpatterns = [
     path('bhaktapur/', bhaktapur, name='bhaktapur'),
     path('hireform/', hireform, name='hireform'),
     path('treksandtours/', trekandtour, name='trekandtour'),
+    path('mytours/', tour, name='tour'),
+    path('richa/', richa, name='richa'),
 ]

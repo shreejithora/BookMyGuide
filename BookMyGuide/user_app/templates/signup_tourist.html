@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Login page{%endblock%}
+{% block title %}Signup page{%endblock%}
 
     {% block css %}
     {% endblock %}
@@ -27,7 +27,7 @@
         <li class="tab active"><a href="{% url 'user:signup_tourist'%}">Register as a Traveler</a></li>
       </ul>
 
-      <form method="POST" action="#" id="signupT">
+      <form method="POST" action="#" id="#">
         {% csrf_token %}
         <h1>Register as a Tourist</h1>
           <div class="input-field">
@@ -46,7 +46,7 @@
               <input type="radio" name="gender" value="0" > Male
               <input type="radio" name="gender" value="1"> Female
               <input type="radio" name="gender" value="2"> Others
-            </div>
+            </div><br>
             <input type="checkbox" name="is_tourist" checked> Is Tourist <br><br>
             <input type="submit" value="Sign up" class="button" />
           </div>

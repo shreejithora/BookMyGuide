@@ -59,7 +59,7 @@
 	/*head*/
 	
 	.head-pic{
-		background-image:  url('../image/wall.jpg');
+		background-image:  url('../../media/image/wall.jpg');
 		height: 60vh;
 		background-size: cover;
 		background-repeat: no-repeat;

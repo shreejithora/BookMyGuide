@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Login page{%endblock%}
+{% block title %}Signup page{%endblock%}
 
     {% block css %}
     {% endblock %}
@@ -69,7 +69,7 @@
         <label for="citizen">Citizenship<span style="font-size: 10px;">(*Scanned both sides)</span></label> 
         <input type="file" name="citizenship_img" required/> <br><br>
         <label for="liscence">Tourist Guide Liscence<span style="font-size: 10px;">(*Scanned both sides)</span></label> 
-        <input type="file" name="Liscence_img" required/><h6>
+        <input type="file" name="Liscence_img" required/><h6><br>
         <label>Languages</label>
         <select multiple="multiple" class="multiselect" id="my-select" name="languages">
           <option value='elem_1' name="nepali">Nepali</option>
@@ -85,7 +85,8 @@
           <option value='elem_3' name="lalitpur">lalitpur</option>
           <option value='elem_4' name="Everest"> Everest Base Camp </option>
           <option value='elem_5' name="Annapurna"> Annapurna Base Camp</option>
-        </select>
+        </select><br>
+        <input type="checkbox" name="is_tourist" checked> Is Tourist <br><br>
         <input type="submit" value="Sign up" class="button" required/>
       </div>
     </form>

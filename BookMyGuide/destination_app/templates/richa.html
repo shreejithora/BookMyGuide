@@ -3,24 +3,21 @@
 
 {% block title %}Contact Us{%endblock%}
 {% block css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/Guideprofile.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/guideprofile.css' %}">
     {% endblock %}
 
 {% block nav-bar %}
-		  <ul>
-		 <a href="#"> <li><span>Home</span></li></a>
-		 <a href="findaguide.html"> <li>Find a Guide</li></a>
-		 <a href="toursandtreks.html"> <li>Tour and Treks</li></a>
-		 <a href="ourservices.html"> <li>Our Services</li></a>
-		 <a href="whyus.html"> <li>Why Us?</li></a>
-		 <a href="contactus.html"> <li>Contact Us</li></a>
-		 <a href="login.html"> <li><i class="fas fa-user"></i> Login</li></a>
-		 <a href="signin_guide.html"> <li>Register ?</li></a>
-		 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-
-		  </ul>
+<ul>
+    <a href="{% url 'bmg_app:home'%}"> <li>Home</li></a>
+    <a href="{% url 'destination:findaguide'%}"><li><span>Find a Guide</span></l /a>
+    <a href="{% url 'destination:trekandtour'%}"> <li>Tour and Treks</li></a>
+    <a href="{% url 'bmg_app:ourservice'%}"> <li>Our Services</li></a>
+    <a href="{% url 'bmg_app:whyus'%}"> <li>Why Us?</li></a>
+    <a href="{% url 'bmg_app:store'%}"> <li>Store</li></a>
+    <a href="{% url 'user:login'%}"> <li><i class="fas fa-user"></i> Login</li></a>
+    <a href="{% url 'user:signup_guide'%}"> <li>Register ?</li></a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+</ul>
 {% endblock %}
 
 {% block media_content %}
@@ -33,9 +30,9 @@
         <div class="content">
             <h1 class="name">Richa Thapa</h1>
         <DIV class="buttons">
-		<BUTTON>Schedule Tour</BUTTON>
-        <button>Go Now</button>
-        <button>Report</button>
+            <button>Schedule Tour</button>
+            <button>Report</button>
+            <a href="{% url 'destination:tour' %}"><button>My Tours</button></a>
         </div>
         <div class="details">
             <h1>Details</h1>
