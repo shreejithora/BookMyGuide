@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user_app',
+    'bmg_app',
+    'destination_app',
     'multiselectfield',
 ]
 
