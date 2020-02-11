@@ -33,12 +33,15 @@
 {% block media_content %}
 <div class="head">
 
-	<div class="head-pic">
+	<div class="head-pic" style="background-image: url('media/image/wall.jpg');">
 		<div class="search">
 	<div class="search-box">
 		<i class="fas fa-search"></i>
-		<input type="text" placeholder="Search..">
-		<p>Search your destination </p>
+		<form action="" method="POST">
+			{% csrf_token %}
+			<input type="text" placeholder="Search.." name="name">
+			<a href="{% url 'destination:trekandtour' %}"><button type="submit">Search</button>></a>
+		</form>
 	</div>
 </div>
 

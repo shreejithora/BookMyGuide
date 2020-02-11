@@ -28,6 +28,7 @@
 {% endblock %}
 
 {% block media_content %}
+
   <div class="mid">
 		<div class="search-container">
 			<input list="brow" placeholder="where do you want to go?">
@@ -37,46 +38,46 @@
 				{% endfor %}
 			</datalist>
 		</div>
+{% for qs in queryset %}
 		<div class="card" >
-			<img src="{% static 'image/abc.jpg' %}" alt="A" style="width:100%">
-			<a href="Annapurna.html"><h1>Annapurna Base Camp Trek</h1></a>
-
-
+			<img src="../../media/image/abc.jpg" alt="A" style="width:100%">
+			<a href="{% url 'destination:annapurna' %}"><h1>{{ qs.destination }}</h1></a>
 		</div>
-		<div class="card" >
-			<img src="{% static 'image/everest.jpg' %}" alt="" style="width:100%">
+{% endfor %}
+		<!-- <div class="card" >
+			<img src="../../media/image/everest.jpg" alt="" style="width:100%">
 			<a  href="Everest.html"><h1>Everest Base Camp Trek</h1></a>
 		</div>
 		<div class="card" >
-			<img src="{% static 'image/bktpur.jpg' %}" alt="A" style="width:100%">
+			<img src="../../media/image/bktpur.jpg" alt="A" style="width:100%">
 			<a href="Bhaktapur.html"><h1>Bhaktapur Tour</h1></a>
 
 		</div>
 		<div class="card" >
-			<img src="{% static 'image/ktm.jpg' %}" alt="" style="width:100%">
+			<img src="../../media/image/ktm.jpg" alt="" style="width:100%">
 			<a href="KTM.HTML"><h1>Kathmandu Tour</h1></a>
 
 		</div>
 		<div class="card" >
-			<img src="{% static 'image/pokhara.jpg' %}" alt="" style="width:100%">
+			<img src="../../media/image/pokhara.jpg" alt="" style="width:100%">
 			<a href=""><h1>Pokhara Tour</h1></a>
 
 	    </div><div class="card" >
-			<img src="{% static 'image/kapuche.jpg' %}" alt="" style="width:100%">
+			<img src="../../media/image/kapuche.jpg" alt="" style="width:100%">
 			<a href=""><h1>Kapuche Trek</h1></a>
 
 		</div>
 		<div class="card" >
-			<img src="{% static 'image/mardi.jpg' %}" alt="" style="width:100%">
+			<img src="../../media/image/mardi.jpg" alt="" style="width:100%">
 			<a href=""><h1>Mardi Trek</h1></a>
 
 		</div>
 		<div class="card" >
-			<img src="{% static 'image/lumbini.jpg' %}" alt="" style="width:100%">
+			<img src="../../media/image/lumbini.jpg" alt="" style="width:100%">
 			<a href=""><h1>Lumbini Tour</h1></a>
 
 		</div>
 
-	</div>
+	</div> -->
 {% endblock%}
 

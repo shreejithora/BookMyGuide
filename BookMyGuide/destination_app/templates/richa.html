@@ -31,54 +31,53 @@
 
     <div class="Main">
         <div class="guidetop">
-            <img src="image/siloutte.jpg "class="sil">
-            <img src="image/b.jpg" class="pp">
+            <img src="../../media/image/siloutte.jpg" class="sil">
+            <img src="../../media/image/b.jpg" class="pp">
         </div>
         <div class="content">
             <h1 class="name">Richa Thapa</h1>
-        <div class="buttons">
-            <button>Schedule Tour</button>
-            <button>Report</button>
-            <a href="{% url 'destination:tour' %}"><button type="button">My Tours</button></a>
+            <div class="buttons">
+                <button>Schedule Tour</button>
+                <button>Report</button>
+                <a href="{% url 'destination:tour' %}"><button type="button">My Tours</button></a>
+            </div>
+            <div class="details">
+                <h1>Details</h1>
+                <hr style="background-color: black;">
+                <p>Hourly pay: 20$<br>
+                    Daily pay: 20$<br>
+                    Liscence No:10203<br>
+                    Experience:5 years<br>
+                    Languages spoken:English,French,Spanish<BR>
+                    <a href="">Tours and Treks list</a>
+                </p>
+            </div>
+            <div class="bio">
+                <p class="comment"><B>Hello! Bonjour! Hola!I've been working in this field for 5 years.
+                    I´m looking for a chance to show travellers my amazing country full of sereneness,beauty and culture.
+                I look forward to go exploring with you.</B></p>
+            </div>
         </div>
-        <div class="details">
-            <h1>Details</h1>
-            <hr style="background-color: black;">
-            <p>Hourly pay: 20$<br>
-                Daily pay: 20$<br>
-                Liscence No:10203<br>
-                Experience:5 years<br>
-                Languages spoken:English,French,Spanish<BR>
-                <a href="">Tours and Treks list</a>
-            </p>
+        <hr class="t">
+        <div class="how">
+            <h1>How it works?</h1>
+            <p><b>STEP 1:</b>You click "Schedule a tour" and fill in your details.<br>
+                <b>STEP 2:</b>If the guide is available, they will accept the tour request. Either way, we will notify you
+                via email within 30 minutes for 'Go Now' requests and within 24 hours for 'Schedule Tour' requests with the payment details.<br>
+                <b>STEP 3:</b>If you have chosen 'Go Now', your guide will immediately leave to come meet you and start your tour. <br>
+                <!--If you have scheduled a tour, you'll receive a reminder by the guide 24 hours in advance of the start time.-->
+                <b>STEP 4:</b>After the guide accepts the tour request, we'll send you a email with a confirmation code.
+                When the guide arrives, you'll give the guide that confirmation code to start the tour.You can use the same
+                code to give reviews later.<BR>
+                <b>STEP 5:</b>Enjoy
+            </P>
         </div>
-        <div class="bio">
-            <p class="comment"><B>Hello! Bonjour! Hola!I've been working in this field for 5 years.
-                I´m looking for a chance to show travellers my amazing country full of sereneness,beauty and culture.
-            I look forward to go exploring with you.</B></p>
+        <hr class="i">
+        <div class="review">
+            <h1>Reviews</h1>
         </div>
-    </dIV>
-    <hr class="t">
-    <div class="how">
-        <h1>How it works?</h1>
-        <p><b>STEP 1:</b>You click "Schedule a tour" and fill in your details.<br>
-            <b>STEP 2:</b>If the guide is available, they will accept the tour request. Either way, we will notify you
-            via email within 30 minutes for 'Go Now' requests and within 24 hours for 'Schedule Tour' requests with the payment details.<br>
-            <b>STEP 3:</b>If you have chosen 'Go Now', your guide will immediately leave to come meet you and start your tour. <br>
-            <!--If you have scheduled a tour, you'll receive a reminder by the guide 24 hours in advance of the start time.-->
-            <b>STEP 4:</b>After the guide accepts the tour request, we'll send you a email with a confirmation code.
-             When the guide arrives, you'll give the guide that confirmation code to start the tour.You can use the same
-              code to give reviews later.<BR>
-            <b>STEP 5:</b>Enjoy
-        </P>
     </div>
-    <hr class="i">
-    <div class="review">
-      <h1>Reviews</h1>
-    </div>
-    </div>
-	</div>
-    </div>
+
 
 <form action="" method="post" accept-charset="utf-8">
     <fieldset><legend>Leave a review</legend>

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import HireModel
+from .models import HireModel,DestinationModel
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -43,7 +43,24 @@ def bhaktapur(request):
     return render(request, 'bhaktapur.html')
 
 def trekandtour(request):
-    return render(request, 'trekandtour.html')
+    if request.method == "POST":
+        qs = DestinationModel.objects.all()
+        name_query = request.GET.get('name')
+
+        if name_query != '' and name_query is not None:
+            qs = qs.filter(destination__icontains = name_query)
+
+        context= {
+            'queryset' : qs
+        }
+        return render(request, 'trekandtour.html', context)
+    else:
+        qs = DestinationModel.objects.all()
+        context= {
+            'queryset' : qs
+        }
+
+        return render(request, 'trekandtour.html', context)
 
 def tour(request):
     return render(request, 'tour.html')
