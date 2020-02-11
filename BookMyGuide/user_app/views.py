@@ -37,7 +37,7 @@ def signup_guide(request):
         email = request.POST['email']
         password = request.POST['password']
         password1 = request.POST['password1']
-        # gender = request.POST['gender']
+        gender = request.POST['gender']
         address = request.POST['address']
         phone = request.POST['phone']
         user_img = request.POST['user_img']
@@ -49,11 +49,11 @@ def signup_guide(request):
         enc_password = pbkdf2_sha256.encrypt(password,rounds=12000,salt_size=32)
 
         # lan = LanguageModel.objects.filter(language__in=languages)
-        guide = GuideRegisterModel.objects.create(first_name=first_name, last_name=last_name, username=username, bio_desc=bio_desc, email=email, password=enc_password,address=address, phone=phone, user_img=user_img, citizenship_img=citizenship_img, Liscence_img=liscence_img, locations=locations)
+        guide = GuideRegisterModel.objects.create(first_name=first_name, last_name=last_name, username=username, bio_desc=bio_desc, email=email, password=enc_password, gender=gender, address=address, phone=phone, user_img=user_img, citizenship_img=citizenship_img, Liscence_img=liscence_img,languages=languages, locations=locations)
         # guide.languages.set(language)
         guide.save()
        
-        return redirect('destination:richa')
+        return redirect('user:login')
 
     else:
         return render(request, 'signup_guide.html')
@@ -73,3 +73,7 @@ def signup_tourist(request):
         return redirect('user:login')
     else:
         return render(request, 'signup_tourist.html')
+
+def logout(request):
+    request.session.flush()
+    return redirect('bmg_app:home')

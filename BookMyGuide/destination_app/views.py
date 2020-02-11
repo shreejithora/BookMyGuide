@@ -1,27 +1,31 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import HireModel
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-
+# @login_required
 def hireform(request):
-    if request.method == "POST":
-        username = request.POST['username']
-        email = request.POST['email']
-        pick_date = request.POST['pick_date']
-        full_address = request.POST['full_address']
-        phone = request.POST['phone']
-        tour = request.POST['tour']
+    if 'id' in request.session:
+        if request.method == "POST":
+            username = request.POST['username']
+            email = request.POST['email']
+            pick_date = request.POST['pick_date']
+            full_address = request.POST['full_address']
+            phone = request.POST['phone']
+            tour = request.POST['tour']
 
-        hire = HireModel.object.create(username=username,
-                                        email=email,
-                                        pick_date=pick_date,
-                                        full_address=full_address,
-                                        address=address,
-                                        phone=phone,
-                                        tour=tour)
-        hire.save()
+            hire = HireModel.object.create(username=username,
+                                            email=email,
+                                            pick_date=pick_date,
+                                            full_address=full_address,
+                                            address=address,
+                                            phone=phone,
+                                            tour=tour)
+            hire.save()
+        else:
+            return render(request, 'hireform.html')
     else:
-        return render(request, 'hireform.html')
+        return redirect('user:login')
 
 def findaguide(request):
     return render(request, 'findaguide.html')

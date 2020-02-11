@@ -21,6 +21,7 @@ app_name='user'
 
 urlpatterns = [
     path('login/', loginauth, name='login'),
+    path('loginout/', logout, name='logout'),
     path('signupguide/', signup_guide, name='signup_guide'),
     path('siguptourist/', signup_tourist, name='signup_tourist'),
 ]

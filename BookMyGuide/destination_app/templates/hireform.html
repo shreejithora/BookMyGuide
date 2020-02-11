@@ -14,8 +14,15 @@
     <a href="{% url 'bmg_app:ourservice'%}"> <li>Our Services</li></a>
     <a href="{% url 'bmg_app:whyus'%}"> <li>Why Us?</li></a>
     <a href="{% url 'bmg_app:store'%}"> <li>Store</li></a>
-    <a href="{% url 'user:login'%}"> <li><i class="fas fa-user"></i><span>Login</span></li></a>
-    <a href="{% url 'user:signup_guide'%}"> <li>Register ?</li></a>
+	{%if 'id' in request.session%}
+		<a href="{%  url 'user:logout' %}"> <li> Log Out</li></a>
+		{%endif%}
+		{% block login%}
+		{%if 'id' not in request.session%}
+			<a href="{% url 'user:login'%}"> <li><i class="fas fa-user"></i> Login</li></a>
+			<a href="{% url 'user:signup_guide'%}"> <li>Register ?</li></a>
+		{%endif%}
+		{% endblock %}
     <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
 </ul>
 {% endblock %}
@@ -32,11 +39,11 @@
           <h1>Hire</h1>
           <div class="input-field">
             <label for="date">Date</label>
-            <input type="date" name="pick_date" value="" />
+            <input type="date" name="pick_date" value="" id="txtDate"/>
             <label for="address">Full addresss</label>
             <input type="text" name="address" required/>
             <label for="contact">Phone</label>
-            <input type="number" name="Phone" required/>
+            <input type="text" name="Phone" required/>
             <label for="country">Country</label>
             <input type="text" name="country" required/>
             <label for="group">Request</label>
@@ -61,8 +68,26 @@
 
           </div>
       </form>
-
+      <script>
+        $(function(){
+        var dtToday = new Date();
+        
+        var month = dtToday.getMonth() + 1;
+        var day = dtToday.getDate();
+        var year = dtToday.getFullYear();
+        if(month < 10)
+            month = '0' + month.toString();
+        if(day < 10)
+            day = '0' + day.toString();
+        
+        var minDate= year + '-' + month + '-' + day;
+        
+        $('#txtDate').attr('min', minDate);
+    });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </div>
+
 
 
 {% endblock%}

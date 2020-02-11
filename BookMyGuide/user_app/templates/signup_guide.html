@@ -40,7 +40,7 @@
         <label for="username">Username</label> 
         <input type="text" name="username" required="username"/><br><br>
         <label for="age" >Age</label> 
-        <input type="number" name="age" value="18" required="age"/><br><br>
+        <input type="number" min=18 name="age" value="18" required="age" /><br><br>
         <label for="bio">Bio</label> 
         <textarea name="bio_desc" id="" cols="50" rows="5"></textarea>
         <!-- <input type="text" name="bio_desc" required="description"/><br><br> -->
@@ -54,13 +54,12 @@
         <input type="text" name="hour_rate" value="1000" required/>NRs.<br><br>
         <label for="drate">Rate per day</label> 
         <input type="text" name="day_rate" value="3000" required/>NRs.<br><br>
-        <div class="sex">
             <div class="sex">
                 <label for="gender">Gender</label> <br>
                 <input type="radio" name="gender" value="0" > Male
                 <input type="radio" name="gender" value="1"> Female
                 <input type="radio" name="gender" value="2"> Others
-              </div><br>
+            </div><br>
         <label for="address">Full address</label> 
         <input type="text" name="address" /><br><br>
         <label for="Phone">Phone</label> 

@@ -14,8 +14,15 @@
     <a href="{% url 'bmg_app:ourservice'%}"> <li>Our Services</li></a>
     <a href="{% url 'bmg_app:whyus'%}"> <li>Why Us?</li></a>
     <a href="{% url 'bmg_app:store'%}"> <li>Store</li></a>
-    <a href="{% url 'user:login'%}"> <li><i class="fas fa-user"></i> Login</li></a>
-    <a href="{% url 'user:signup_guide'%}"> <li>Register ?</li></a>
+	{%if 'id' in request.session%}
+		<a href="{%  url 'user:logout' %}"> <li> Log Out</li></a>
+		{%endif%}
+		{% block login%}
+		{%if 'id' not in request.session%}
+			<a href="{% url 'user:login'%}"> <li><i class="fas fa-user"></i> Login</li></a>
+			<a href="{% url 'user:signup_guide'%}"> <li>Register ?</li></a>
+		{%endif%}
+		{% endblock %}
     <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
 </ul>
 {% endblock %}
