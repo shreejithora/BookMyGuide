@@ -29,10 +29,10 @@
         </div>
         <div class="content">
             <h1 class="name">Richa Thapa</h1>
-        <DIV class="buttons">
+        <div class="buttons">
             <button>Schedule Tour</button>
             <button>Report</button>
-            <a href="{% url 'destination:tour' %}"><button>My Tours</button></a>
+            <a href="{% url 'destination:tour' %}"><button type="button">My Tours</button></a>
         </div>
         <div class="details">
             <h1>Details</h1>
@@ -74,16 +74,14 @@
     </div>
 
 <form action="" method="post" accept-charset="utf-8">
-        <fieldset><legend>Leave a review</legend>
-        <p><label for="review">Review     </label><textarea name="review" rows="8" cols="40">
-           </textarea></p>
-           <p><label for="customer code">Customer code</label><textarea name="code" rows="1"  cols="40">
-        </textarea></p>
-        <p><input type="submit" value="Submit Review     "></p>
+    <fieldset><legend>Leave a review</legend>
+        <p><label for="review">Review</label><textarea name="review" rows="8" cols="40"></textarea></p>
+        <p><label for="customer code">Customer code</label><input type="text"><p>
+        <p><input type="submit" value="Submit Review"></p>
         <input type="hidden" name="product_type" value="actual_product_type" id="product_type">
         <input type="hidden" name="product_id" value="actual_product_id" id="product_id">
     </fieldset>
-    </form>
+</form>
 
 {% endblock%}
 

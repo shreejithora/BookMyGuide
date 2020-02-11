@@ -47,19 +47,20 @@
         <label for="email">Email</label> 
         <input type="email" name="email" required="email"/><br><br>
         <label for="password">Password</label> 
-        <input type="password" name="password1" required/><br><br>
+        <input type="password" name="password" required/><br><br>
         <label for="password">Confirm Password</label> 
-        <input type="password" name="password2" required/><br><br>
+        <input type="password" name="password1" required/><br><br>
         <label for="hrate">Rate per hour</label> 
         <input type="text" name="hour_rate" value="1000" required/>NRs.<br><br>
         <label for="drate">Rate per day</label> 
         <input type="text" name="day_rate" value="3000" required/>NRs.<br><br>
         <div class="sex">
-          <label for="gender">Gender</label> <br>
-          <input type="radio" name="gender" value="male" > Male
-          <input type="radio" name="gender" value="female"> Female
-          <input type="radio" name="gender" value="other"> Other
-        </div><br>
+            <div class="sex">
+                <label for="gender">Gender</label> <br>
+                <input type="radio" name="gender" value="0" > Male
+                <input type="radio" name="gender" value="1"> Female
+                <input type="radio" name="gender" value="2"> Others
+              </div><br>
         <label for="address">Full address</label> 
         <input type="text" name="address" /><br><br>
         <label for="Phone">Phone</label> 
@@ -85,8 +86,7 @@
           <option value='elem_3' name="lalitpur">lalitpur</option>
           <option value='elem_4' name="Everest"> Everest Base Camp </option>
           <option value='elem_5' name="Annapurna"> Annapurna Base Camp</option>
-        </select><br>
-        <input type="checkbox" name="is_tourist" checked> Is Tourist <br><br>
+        </select><br><br>
         <input type="submit" value="Sign up" class="button" required/>
       </div>
     </form>

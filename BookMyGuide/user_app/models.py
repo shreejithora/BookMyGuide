@@ -31,8 +31,23 @@ class GuideRegisterModel(models.Model):
     user_img = models.ImageField(upload_to='UserImg', blank=True, null=True)
     citizenship_img = models.ImageField(upload_to='Citizenship')
     Liscence_img = models.ImageField(upload_to='LiscenceImg')
-    languages = models.ManyToManyField(LanguageModel)
-    locations = models.ManyToManyField(DestinationModel)
+
+    LANGUAGES = (
+        ('Nepali', 'Nepali'),
+        ('English', 'English'),
+        ('Spanish', 'Spanish'),
+        ('Hindi', 'Hindi')
+    )
+    languages = MultiSelectField(choices=LANGUAGES)
+    
+    # languages = models.ManyToManyField(LanguageModel)
+    DESTINATIONS = (
+        ('kathmandu', 'Kathmandu'),
+        ('Bhaktapur', 'Bhaktapur'),
+        ('Everest Base Camp', 'Everest Base Camp'),
+        ('Annapurna Base Camp', 'Annapurna Base Camp'),
+    )
+    locations = MultiSelectField(choices=DESTINATIONS)
     is_guide = models.BooleanField(default=1)
 
     def __str__(self):
@@ -54,7 +69,7 @@ class TouristRegisterModel(models.Model):
         (GENDER_OTHERS, 'Others'),
     ]
     gender = models.IntegerField(choices=GENDER_CHOICES)
-    is_tourist = models.BooleanField(default=1)
+    is_tourist = models.BooleanField(default=True)
 
     def __str__(self):
         return(self.username)
