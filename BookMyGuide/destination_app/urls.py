@@ -29,4 +29,5 @@ urlpatterns = [
     path('treksandtours/', trekandtour, name='trekandtour'),
     path('mytours/', tour, name='tour'),
     path('richa/', richa, name='richa'),
+    path('trek/annapurna/', anna, name='anna')
 ]

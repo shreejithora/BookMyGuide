@@ -37,11 +37,12 @@
 		<div class="search">
 	<div class="search-box">
 		<i class="fas fa-search"></i>
-		<form action="" method="POST">
-			{% csrf_token %}
+		<!-- <form action="" method="POST">
+			{% csrf_token %} -->
 			<input type="text" placeholder="Search.." name="name">
-			<a href="{% url 'destination:trekandtour' %}"><button type="submit">Search</button>></a>
-		</form>
+			
+			<a href="{% url 'destination:anna' %}" style="text-decoration:none;"><p>Search your destination</p></a>
+		<!-- </form> -->
 	</div>
 </div>
 

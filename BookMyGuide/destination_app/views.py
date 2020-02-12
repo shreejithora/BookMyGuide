@@ -67,3 +67,6 @@ def tour(request):
 
 def richa(request):
     return render(request, 'richa.html')
+
+def anna(request):
+    return render(request, 'anna1.html')

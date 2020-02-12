@@ -31,7 +31,7 @@
 {% block media_content %}
     <div class="middle">
 		<h1>Annapurna Base Camp</h1>
-		<img src="image/abc.jpg">
+		<img src="../../media/image/abc.jpg">
 		<div class="content">
 		 <h2>Overview</h2>
 		 <h3><b>Maximum Elevation:</b>5416 meters, Thorong La Pass </h3>
@@ -39,7 +39,7 @@
 		 <h3><b>Dificulty:</b>Moderate</h3>
 		 <h3><b>Accomodation:</b>Teahouse/Lodge</h3>
 		 <h3><b>Permit needed:</b>ACAP,TIMS</h3>
-		<button onclick=""><b>FIND A GUIDE</b></button>
+		<a href="{% url 'destination:findaguide' %}"><button type="button"><b>FIND A GUIDE</b></button></a>
 		</div>
 		<P>There are few treks that combine so many different landscapes and bring you so close to the base of 7,000 and 8,000 meter peaks in a such a short period of time as the Annapurna Base Camp Trek.
 			The Annapurna Base Camp trek is one of the most popular treks in the Annapurna region. The trail goes alongside terraced rice paddies, lush rhododendron forests and high altitude landscapes with the Annapurna Range in view most of the times.</P>

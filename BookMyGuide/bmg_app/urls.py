@@ -24,4 +24,5 @@ urlpatterns = [
     path('ourservices/', ourservices, name='ourservice'),
     path('store/', store, name='store'),
     path('whyus/', whyus, name='whyus'),
+    path('sendmail/', sendmail, name='sendmail'),
 ]
