@@ -1,7 +1,9 @@
 certifi==2019.11.28
 chardet==3.0.4
 Django==2.2
+django-multiselectfield==0.1.11
 idna==2.8
+passlib==1.7.2
 Pillow==7.0.0
 pytz==2019.3
 requests==2.22.0
