@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block css %}
-	 
+	
 {% endblock %}
 
 {% block nav-bar %}
@@ -33,21 +33,54 @@
 {% block media_content %}
 <div class="head">
 
-	<div class="head-pic" style="background-image: url('media/image/wall.jpg');">
-		<div class="search">
-	<div class="search-box">
-		<i class="fas fa-search"></i>
-		<!-- <form action="" method="POST">
-			{% csrf_token %} -->
-			<input type="text" placeholder="Search.." name="name">
-			
-			<a href="{% url 'destination:anna' %}" style="text-decoration:none;"><p>Search your destination</p></a>
-		<!-- </form> -->
+		<div class="head-pic">
+			<div class="search">
+		<div class="search-box">
+
+			<input type="text" placeholder="Search.." >
+
+		</div>
 	</div>
-</div>
+
+		</div>
+	</div>
+	<hr>
+	<!-- guides -->
+	<div class="mid">
+        <div class="card" >
+			<img src="../media/image/b.jpg" alt="" >
+			<a  href="Richa.html"><p class="name">Richa Thapa</p></a>
+
+
+		</div>
+		<div class="card" >
+			<img src="../media/image/A.jpg" alt="" >
+			<a  href=""><p class="name" >Shrey Lama</p></a>
+
+
+		</div>
+
+		<div class="card" >
+			<img src="../media/image/C.jpg" alt="" >
+			<a  href=""><p class="name">Sara Sharma</p></a>
+
+
+		</div>
+		<div class="card" >
+			<img src="../media/image/D.jpg" alt="" >
+			<a  href=""><p class="name">Alish Shrestha</p></a>
+
+
+		</div>
 
 	</div>
-</div>
-<hr>
+	<!-- back-img -->
+	<div class="back-img">
+		<div class="destination-content">
+			<h1>VIEW YOUR DESTINATION</h1>
+			<p>If the destination is heaven, why do we scramble to be first in line for hell?</p>
+			<button>Show your destination</button>
+		</div>
+	</div>
 {% endblock %}
 

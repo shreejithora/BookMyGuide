@@ -16,7 +16,10 @@
 }
 .main{
   height: 300px;
-align-content: center;}
+align-content: center;
+display:flex;
+justify-content:center;
+}
 .card {
   color: grey;
   margin: 30px 50px 10px 10px;

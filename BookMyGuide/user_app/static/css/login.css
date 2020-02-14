@@ -13,8 +13,8 @@
 	padding: 0 0 20px 0;
 	font-size: 26px;
 	color: #666;
-	text-align: center;
-}
+	text-align: center
+;}
 
 .forms form { padding: 30px; }
 /*#signupG { display: none; }*/
@@ -50,10 +50,10 @@
 	color: #444;
 	border-top: 3px solid orange;
 }
-/*.forms input {
+.forms input {
 	font-size: 16px;
 	display: block;
-	width: 80%;
+	width: 50%;
 	padding: 10px 20px;
 	border: 1px solid #ddd;
 	color: #666;
@@ -63,7 +63,7 @@
 	-o-transition: all 0.4s ease-in-out;
 	-webkit-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
-}*/
+}
 .forms input:focus {
 	outline: 0;
 	border-color: #2e5ed7;

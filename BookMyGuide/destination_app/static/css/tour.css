@@ -4,6 +4,8 @@
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 5%;
+	padding: 10PX;
+	width: 90%;
 
 }
 
@@ -13,5 +15,9 @@
 }
 
 .content1{
-	margin-left: 155%;
+	margin-left: 15%;
+
+}
+.itiniery .long{
+	display: none;
 }

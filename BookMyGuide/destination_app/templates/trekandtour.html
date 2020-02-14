@@ -28,9 +28,7 @@
 {% endblock %}
 
 {% block media_content %}
-
-  <div class="mid">
-		<div class="search-container">
+<div class="search-container">
 			<input list="brow" placeholder="where do you want to go?">
 			<datalist id="brow">
 				{% for item in data %}
@@ -38,7 +36,11 @@
 				{% endfor %}
 			</datalist>
 		</div>
+
+  <div class="middle">
+
 <!-- {% for qs in queryset %} -->
+	  <div class="row1">
 		<div class="card" >
 			<img src="../../media/image/abc.jpg" alt="A" style="width:100%">
 			<a href="{% url 'destination:annapurna' %}"><h1>{{ qs.destination }}</h1></a>
@@ -58,6 +60,8 @@
 			<a href="KTM.HTML"><h1>Kathmandu Tour</h1></a>
 
 		</div>
+		  </div>
+	  <div class="row2">
 		<div class="card" >
 			<img src="../../media/image/pokhara.jpg" alt="" style="width:100%">
 			<a href=""><h1>Pokhara Tour</h1></a>
@@ -77,6 +81,7 @@
 			<a href=""><h1>Lumbini Tour</h1></a>
 
 		</div>
+		  </div>
 
 	</div>
 {% endblock%}
