@@ -35,7 +35,7 @@
 
 
     </ul>
-    <form action="{% url 'bmg_app:sendmail'%}" id="login" method="POST">
+    <form action="" id="login" method="POST">
         {% csrf_token %}
           <h1>Hire a Guide</h1>
           <div class="input-field">
@@ -46,14 +46,16 @@
             <label for="date">Date</label>
             <input type="date" name="pick_date" value="" id="txtDate"/><br><br>
             <label for="address">Full addresss</label>
-            <input type="text" name="address" required/><br><br>
+            <input type="text" name="full_address" required/><br><br>
             <label for="contact">Phone</label>
-            <input type="text" name="Phone" placeholder="for eg: +977 for Nepal" required/><h6>*with country code</h6><br><br>
+            <input type="text" name="phone" placeholder="for eg: +977 for Nepal" required/><h6>*with country code</h6><br>
             <label for="country">Country</label>
-            <input type="text"  name="country" required/><br>
+            <input type="text"  name="country" required/><br><br>
             <label for="group">Request</label>
-            <input type="radio" name="tour" value="stour"> Shared tour<br>
-			<input type="radio" name="tour" value="ptour"> Private tour<br><br>
+            <select name="tour" id="tours">
+                <option value="shared">shared</option>
+                <option value="private">private</option>
+            </select><br><br>
 			<label for="tour_no">Traveling days</label>
 			<select>
 				  <option value="one">1</option>
@@ -68,7 +70,10 @@
 			</select>
             <br>
             <br>
-            <a href="{% url 'bmg_app:sendmail' %}"><button type="submit">Hire</button></a>
+            <div class="buttons">
+                <a href="{% url 'destination:hireform' %}"><button type="submit">Hire</button></a>
+            </div>
+            
 
 
           </div>

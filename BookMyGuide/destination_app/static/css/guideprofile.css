@@ -39,10 +39,11 @@ a{
     width:170px;
     border: none;
     background-color: orange;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 .buttons button:hover{
     background-color: green;
+    color: white;
 }
 .details{
    

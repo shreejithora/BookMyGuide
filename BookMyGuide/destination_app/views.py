@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect, HttpResponse
 from .models import HireModel,DestinationModel
+from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 # Create your views here.
 # @login_required
@@ -12,16 +15,24 @@ def hireform(request):
             pick_date = request.POST['pick_date']
             full_address = request.POST['full_address']
             phone = request.POST['phone']
+            country = request.POST['country']
             tour = request.POST['tour']
 
-            hire = HireModel.object.create(username=username,
-                                            email=email,
-                                            pick_date=pick_date,
-                                            full_address=full_address,
-                                            address=address,
-                                            phone=phone,
-                                            tour=tour)
+            hire = HireModel.objects.create(username=username, email=email, pick_date=pick_date, full_address=full_address, phone=phone,country=country, tour=tour)
             hire.save()
+            try:
+                send_mail('Hello from Book My Guide',
+                'Hello! You have been asked to review the information and confirm or deny the request within 24',
+                'bookmyguide1@gmail.com',
+                ['dorsh78@gmail.com', 'kalinchowk98@gmail.com'],
+                fail_silently = False)
+                messages.success(request, 'Hire request sent')
+                return redirect('destination:richa')
+
+                # return redirect('destination:richa')
+            except:
+                return HttpResponse('failed to send email !')
+          
         else:
             return render(request, 'hireform.html')
     else:

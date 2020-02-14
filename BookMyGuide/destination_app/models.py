@@ -13,6 +13,7 @@ class HireModel(models.Model):
     pick_date = models.DateField()
     full_address = models.CharField(max_length=120)
     phone = models.CharField(max_length=14)
+    country = models.CharField(max_length=50)
     TOUR_CHOICES = (
         ('shared', 'shared'),
         ('private', 'private'),

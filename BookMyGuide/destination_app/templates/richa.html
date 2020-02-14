@@ -4,7 +4,7 @@
 {% block title %}Contact Us{%endblock%}
 {% block css %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/guideprofile.css' %}">
-    {% endblock %}
+{% endblock %}
 
 {% block nav-bar %}
 <ul>
@@ -28,6 +28,19 @@
 {% endblock %}
 
 {% block media_content %}
+    <div class="form-group">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li style="background-color: lightgreen;color: green;width: 100%;height: 20%;">
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div><br><br>
 
     <div class="Main">
         <div class="guidetop">
@@ -81,9 +94,9 @@
 
 <form action="" method="post" accept-charset="utf-8">
     <fieldset><legend>Leave a review</legend>
-        <p><label for="review">Review</label><textarea name="review" rows="8" cols="40"></textarea></p>
-        <p><label for="customer code">Customer code</label><input type="text"><p>
-        <p><input type="submit" value="Submit Review"></p>
+        <p><label for="review">Review   </label><textarea name="review" rows="5" cols="40"></textarea></p><br>
+        <p><label for="customer code">Customer code     </label><input type="text"><p><br>
+        <p><input type="submit" value="Submit Review"></p><br>
         <input type="hidden" name="product_type" value="actual_product_type" id="product_type">
         <input type="hidden" name="product_id" value="actual_product_id" id="product_id">
     </fieldset>
