@@ -64,23 +64,7 @@ color:white;
   width:6vh;
 }
 
- .mid{
-  clear: both;
-   float: left;
-      width:100%;
-      
-      display: flex;
-  }
 
-  .card {
-   float: left;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 250px;
-    margin: 80px 30px 10px 50px;
-    padding: 7px;
-    text-align: center;
-
-  } 
   .card img{
     height: 150px;
     max-width: 250px;

@@ -1,7 +1,6 @@
-.mid{
+.middle{
     width:100%;
     height: 80vh;
-   
     font-family: Century gothic;
 }
 
@@ -14,34 +13,45 @@
     width: 50vh;
     float:right;
 }
-.search-container button{
+/*.search-container button{
     float:right;
-}
-.card {
+}*/
+.middle .card {
     float: left;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 250px;
     margin: 10px 50px 10px 10px;
     padding: 10px;
   }
-  .card img{
+.middle  .card img{
       height: 110px;
       max-width: 250px;
   }
 
-.card h1{
-    height: 40px;
+.middle .card h1{
+    height: 20px;
     font-family: sans-serif;
     text-align: center; 
     color: #000;
 }
-.card h1:hover
+.middle .card h1:hover
 {color: orangered;
 }
-.card a{
+.middle.card a{
     height: 60px;
     text-decoration: none;
     font-size: 11PX;
    
 }
-  
+
+.search-container a{
+    text-decoration: none;
+    margin-left: 50px;
+    color: black;
+    opacity: 0.8;
+}
+.search-container a:hover{
+    color: orange;
+}
+
+
